@@ -29,3 +29,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 ENV GOPATH /go
 
+# vim
+COPY .vimrc /root/.vim
+COPY .vim /root
+
+
+
