@@ -2,6 +2,9 @@ from ubuntu:16.04
 
 MAINTAINER shidenggui <longlyshidenggui@gmail.com>
 
+# use aliyun soruce
+ADD https://gist.githubusercontent.com/cloverstd/d60f3cc96fad59cab18a/raw/0f5dcc6fdc86d1811dbf1eeecdae9259a3ee983a/aliyun.sources.list /etc/apt/sources.list
+
 # add pythoh conda
 RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates \
     libglib2.0-0 libxext6 libsm6 libxrender1 \
