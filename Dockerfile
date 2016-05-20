@@ -30,9 +30,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ENV GOPATH /go
 
 # vim
-COPY .vimrc /root/.vim
-COPY .vim /root
-
+ADD vim.tar /root/
 RUN apt-get install -y vim
 RUN vim +BundleInstall! 
 RUN cd /root/.vim/YouCompleteMe \
