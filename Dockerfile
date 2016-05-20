@@ -4,7 +4,16 @@ MAINTAINER shidenggui <longlyshidenggui@gmail.com>
 
 # use aliyun soruce
 RUN rm /etc/apt/sources.list
-ADD https://gist.githubusercontent.com/cloverstd/d60f3cc96fad59cab18a/raw/0f5dcc6fdc86d1811dbf1eeecdae9259a3ee983a/aliyun.sources.list /etc/apt/sources.list
+RUN && echo deb http://mirrors.163.com/ubuntu/ xenial main restricted universe multiverse >> /etc/apt/sources.list \
+    && echo deb http://mirrors.163.com/ubuntu/ xenial-security main restricted universe multiverse >> /etc/apt/sources.list \
+    && echo deb http://mirrors.163.com/ubuntu/ xenial-updates main restricted universe multiverse >> /etc/apt/sources.list \
+    && echo deb http://mirrors.163.com/ubuntu/ xenial-proposed main restricted universe multiverse >> /etc/apt/sources.list \
+    && echo deb http://mirrors.163.com/ubuntu/ xenial-backports main restricted universe multiverse >> /etc/apt/sources.list \
+    && echo deb-src http://mirrors.163.com/ubuntu/ xenial main restricted universe multiverse >> /etc/apt/sources.list \
+    && echo deb-src http://mirrors.163.com/ubuntu/ xenial-security main restricted universe multiverse >> /etc/apt/sources.list \
+    && echo deb-src http://mirrors.163.com/ubuntu/ xenial-updates main restricted universe multiverse >> /etc/apt/sources.list \
+    && echo deb-src http://mirrors.163.com/ubuntu/ xenial-proposed main restricted universe multiverse >> /etc/apt/sources.list \
+    && echo deb-src http://mirrors.163.com/ubuntu/ xenial-backports main restricted universe multiverse >> /etc/apt/sources.list
 
 # add pythoh conda
 RUN apt-get update --fix-missing && apt-get install -y wget bzip2 ca-certificates \
