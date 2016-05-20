@@ -7,7 +7,7 @@ RUN rm /etc/apt/sources.list
 COPY sources.list /etc/apt/sources.list
 
 # add pythoh conda
-RUN apt-get update && apt upgrade && apt-get install -y wget 
+RUN apt-get update && apt-get -y upgrade && apt-get install -y wget 
 RUN wget --quiet https://repo.continuum.io/archive/Anaconda3-4.0.0-Linux-x86_64.sh && \
     /bin/bash /Anaconda3-4.0.0-Linux-x86_64.sh -b -p /opt/conda && \
     rm /Anaconda3-4.0.0-Linux-x86_64.sh
