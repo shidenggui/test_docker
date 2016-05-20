@@ -4,7 +4,7 @@ MAINTAINER shidenggui <longlyshidenggui@gmail.com>
 
 # use aliyun soruce
 RUN rm /etc/apt/sources.list
-RUN && echo deb http://mirrors.163.com/ubuntu/ xenial main restricted universe multiverse >> /etc/apt/sources.list \
+RUN echo deb http://mirrors.163.com/ubuntu/ xenial main restricted universe multiverse >> /etc/apt/sources.list \
     && echo deb http://mirrors.163.com/ubuntu/ xenial-security main restricted universe multiverse >> /etc/apt/sources.list \
     && echo deb http://mirrors.163.com/ubuntu/ xenial-updates main restricted universe multiverse >> /etc/apt/sources.list \
     && echo deb http://mirrors.163.com/ubuntu/ xenial-proposed main restricted universe multiverse >> /etc/apt/sources.list \
