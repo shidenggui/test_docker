@@ -33,5 +33,10 @@ ENV GOPATH /go
 COPY .vimrc /root/.vim
 COPY .vim /root
 
+RUN apt-get install -y vim
+RUN vim +BundleInstall! 
+RUN cd /root/.vim/YouCompleteMe \
+    && ./install.py --gocode-completer
 
+EXPOSE 8888
 
