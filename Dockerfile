@@ -3,6 +3,7 @@ from ubuntu:16.04
 MAINTAINER shidenggui <longlyshidenggui@gmail.com>
 
 # use aliyun soruce
+RUN rm /etc/apt/sources.list
 ADD https://gist.githubusercontent.com/cloverstd/d60f3cc96fad59cab18a/raw/0f5dcc6fdc86d1811dbf1eeecdae9259a3ee983a/aliyun.sources.list /etc/apt/sources.list
 
 # add pythoh conda
